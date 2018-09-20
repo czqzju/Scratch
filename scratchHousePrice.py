@@ -16,7 +16,7 @@ class scratchHousePrice():
     def findPageCotent(self, driver):
         items = driver.find_elements_by_xpath("//li[@class = 'clear LOGCLICKDATA']/a")
         print(len(items))
-
+        print("Hello")
 
     def __del__(self):
         self.driver.close()
