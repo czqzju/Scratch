@@ -10,7 +10,7 @@ from selenium.common.exceptions import NoSuchElementException
 class scratchHousePrice():
     def __init__(self):
         self.driver = webdriver.Chrome()
-        self.f = open("data\\link.txt", 'r')
+        self.f = open("data\\link.txt", 'w')
 
 
     def scrtchHousePrice(self):
@@ -18,14 +18,7 @@ class scratchHousePrice():
         file = self.f
         driver.get("https://hz.lianjia.com/ershoufang/")
         driver.maximize_window()
-        # self.getLinks(driver, file)
-        self.getPageContent(driver, file)
-
-
-    def getPageContent(self, driver, file):
-        links = file.readlines()
-        for link in links:
-            driver.get(link)
+        self.getLinks(driver, file)
 
 
     def getLinks(self, driver, file):
