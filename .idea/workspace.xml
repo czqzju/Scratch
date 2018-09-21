@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5d67dd20-8c5f-464c-b1f2-403aa200651f" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/link.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scratchHousePrice.py" beforeDir="false" afterPath="$PROJECT_DIR$/scratchHousePrice.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,22 +22,25 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="838" />
+          <entry key="py" value="2174" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="838" />
+          <entry key="Python" value="2174" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="txt" value="3" />
+          <entry key="csv" value="1" />
+          <entry key="py" value="2" />
+          <entry key="txt" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PLAIN_TEXT" value="3" />
+          <entry key="PLAIN_TEXT" value="5" />
+          <entry key="Python" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -47,19 +52,32 @@
         <entry file="file://$PROJECT_DIR$/scratchHousePrice.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="209">
-              <caret line="21" column="40" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
+              <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
               <folding>
-                <element signature="e#15#26#0" expanded="true" />
-                <marker date="1537492564857" expanded="true" signature="650:658" ph="..." />
-                <marker date="1537492564857" expanded="true" signature="692:1074" ph="..." />
+                <element signature="e#1#11#0" expanded="true" />
+                <marker date="1537512058672" expanded="true" signature="976:2424" ph="..." />
+                <marker date="1537512058672" expanded="true" signature="2458:2860" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/link.txt">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://C:/Python/Python37/Lib/site-packages/selenium/webdriver/remote/errorhandler.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="720">
+              <caret line="241" selection-start-line="241" selection-end-line="241" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://C:/Python/Python37/Lib/site-packages/selenium/webdriver/remote/webdriver.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="197">
+              <caret line="319" selection-start-line="319" selection-end-line="319" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -195,17 +213,38 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/link.txt" />
-    <entry file="file://$PROJECT_DIR$/data/link.txt">
+    <entry file="file://C:/Python/Python37/Lib/site-packages/selenium/webdriver/remote/errorhandler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="241" selection-start-line="241" selection-end-line="241" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/contents.csv">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://C:/Python/Python37/Lib/site-packages/selenium/webdriver/remote/webdriver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="319" selection-start-line="319" selection-end-line="319" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/link.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="212" column="25" lean-forward="true" selection-start-line="212" selection-end-line="213" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scratchHousePrice.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
-          <caret line="21" column="40" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
+          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
           <folding>
-            <element signature="e#15#26#0" expanded="true" />
-            <marker date="1537492564857" expanded="true" signature="650:658" ph="..." />
-            <marker date="1537492564857" expanded="true" signature="692:1074" ph="..." />
+            <element signature="e#1#11#0" expanded="true" />
+            <marker date="1537512058672" expanded="true" signature="976:2424" ph="..." />
+            <marker date="1537512058672" expanded="true" signature="2458:2860" ph="..." />
           </folding>
         </state>
       </provider>
