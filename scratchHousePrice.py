@@ -9,7 +9,7 @@ from selenium.common.exceptions import NoSuchElementException
 class scratchHousePrice():
     def __init__(self):
         self.driver = webdriver.Chrome()
-        self.f = open("data\\link.txt", 'w')
+        self.f = open("data\\link.txt", 'r')
 
 
     def scrtchHousePrice(self):
@@ -17,8 +17,8 @@ class scratchHousePrice():
         file = self.f
         driver.get("https://hz.lianjia.com/ershoufang/")
         driver.maximize_window()
-        self.getLinks(driver, file)
-        file = open("data\\link.txt", 'r')
+        # self.getLinks(driver, file)
+        # file = open("data\\link.txt", 'r')
         self.getPageContent(driver, file)
 
 
@@ -32,15 +32,22 @@ class scratchHousePrice():
         for link in links:
             print(link)
             driver.get(link)
-            totalPrice = driver.find_element_by_xpath("//span[@class = 'total']").text
-            unitPrice = driver.find_element_by_xpath("//span[@class = 'unitPriceValue']").text
-            totalArea = driver.find_element_by_xpath("//div[@class = 'introContent']//div[@class = 'content']/ul/li[3]").text
-            innerArea = driver.find_element_by_xpath("//div[@class = 'introContent']//div[@class = 'content']/ul/li[5]").text
+            try:
+                totalPrice = driver.find_element_by_xpath("//span[@class = 'total']").text
+                unitPrice = driver.find_element_by_xpath("//span[@class = 'unitPriceValue']").text
+                totalArea = driver.find_element_by_xpath("//div[@class = 'introContent']//div[@class = 'content']/ul/li[3]").text
+                innerArea = driver.find_element_by_xpath("//div[@class = 'introContent']//div[@class = 'content']/ul/li[5]").text
 
-            uploadTime = driver.find_element_by_xpath("//div[@class = 'transaction']//div[@class = 'content']/ul/li[1]").text
-            lastTransaction = driver.find_element_by_xpath("//div[@class = 'transaction']//div[@class = 'content']/ul/li[3]").text
+                uploadTime = driver.find_element_by_xpath("//div[@class = 'transaction']//div[@class = 'content']/ul/li[1]").text
+                lastTransaction = driver.find_element_by_xpath("//div[@class = 'transaction']//div[@class = 'content']/ul/li[3]").text
 
-            xiaoquName = driver.find_element_by_xpath("//div[@class = 'communityName']/a[1]").text
+                xiaoquName = driver.find_element_by_xpath("//div[@class = 'communityName']/a[1]").text
+                districtLevelOne = driver.find_element_by_xpath("//div[@class = 'areaName']/span[2]/a[1]").text
+                districtLevelTwo = driver.find_element_by_xpath("//div[@class = 'areaName']/span[2]/a[2]").text
+
+            except NoSuchElementException as msg:
+                print(msg)
+                continue
 
             totalPrice = totalPrice
             unitPrice = unitPrice[:len(unitPrice)-4]
@@ -48,7 +55,7 @@ class scratchHousePrice():
             innerArea = innerArea[4:len(innerArea)-1]
             uploadTime = uploadTime[5:]
             lastTransaction = lastTransaction[5:]
-            houseData = (xiaoquName, totalPrice, unitPrice, totalArea, innerArea, uploadTime, lastTransaction)
+            houseData = (xiaoquName, totalPrice, unitPrice, totalArea, innerArea, uploadTime, lastTransaction, districtLevelOne, districtLevelTwo)
             # print('%s %.2f %.2f %.2f %s %s'%(xiaoquName, totalPrice, totalArea, innerArea, uploadTime, lastTransaction))
             print(houseData)
             csv_write.writerow(houseData)
